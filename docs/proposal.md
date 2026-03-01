@@ -4,7 +4,7 @@
 |------|---------------|-----------------|
 | Hala | Protocol Knowledge Base | @lockedinlulu |
 | Astra | Incident Classifier | @yunastra |
-| Farida | Task Assignment & Tracking | @Fa-rida |
+| Farida | Task Assignment & Tracking | @fa-rida |
 | MD | Integration, Testing & Presentation | @[username] |
 
 ## Problem Statement
