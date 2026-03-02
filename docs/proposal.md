@@ -5,7 +5,7 @@
 | Hala | Protocol Knowledge Base | @lockedinlulu |
 | Astra | Incident Classifier | @yunastra |
 | Farida | Task Assignment & Tracking | @fa-rida |
-| MD | Integration, Testing & Presentation | @[username] |
+| MD | Integration, Testing & Presentation | @Mdalminhaz |
 
 ## Problem Statement
 This project designs a system that carries out appropriate response protocols in emergencies. It helps organizations digitize emergency procedures that can be followed accurately. In stressful situations, people are prone to forgetting steps or making errors and printed out protocols are time consuming and not as effective. This system reduces the possibility of human error in the chaos that ensues during an emergency by guiding responders through the right steps and ensuring tasks are completed.
