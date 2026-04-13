@@ -9,3 +9,5 @@ Builds a workflow that stores emergency response protocols into the system.
 - [ ] Testing
 - [ ] Integration with other components
 - [ ] Documentation complete
+
+- [ ] Use nyc open data for sample data
