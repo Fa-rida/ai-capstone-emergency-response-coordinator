@@ -74,7 +74,7 @@ The model achieved equal precision and recall, correctly classifying all test sa
 |-------|-----------------------|-----------------------------|-----------------------------|------------|
 | Record 1 | NEGATIVE (0.9961) | neutral (0.8441) | neutral (0.9568) | Generic |
 | Record 2 | NEGATIVE (0.9986) | neutral (0.8649) | neutral (0.8854) | Fine-Tuned A |
-| Record 3 | NEGATIVE (0.9959) | negative (0.5479) | neutral (0.9159) | Generic|
+| Record 3 | NEGATIVE (0.9959) | negative (0.5479) | neutral (0.9159) | Generic |
 | Record 4 | NEGATIVE (0.9994) | negative (0.8257) | neutral (0.8523) | Generic |
 | Record 5 | NEGATIVE (0.9880) | neutral (0.6699) | neutral (0.5590) | Fine-Tuned A |
 
@@ -116,7 +116,7 @@ I chose this model because it does a better job distinguishing between routine u
 
 ---
 
-**Confidence threshold: 0.90**
+**Confidence threshold:** 0.90
 
 This threshold ensures that only high-confidence predictions are used while filtering out uncertain classifications.
 
@@ -125,7 +125,6 @@ This threshold ensures that only high-confidence predictions are used while filt
 **Priority metric:**  
 
 **Recall** — Recall is more important for my project because missing a real emergency would be worse than having a few false alarms. It’s better to catch all possible urgent cases, even if some end up not being critical.
-
 
 ---
 
@@ -136,4 +135,5 @@ One limitation of this project is the very small dataset used for testing. With 
 If I had more time and data, I would test the system on a larger and more diverse set of logs, including more realistic emergency and incident scenarios. I would also consider fine-tuning my own model using cybersecurity or emergency response data to improve accuracy.
 
 In the future, I would test additional models that are specifically designed for classification or anomaly detection, since those may be more effective for identifying urgent tasks. This would help improve the reliability of the system when assigning and prioritizing tasks in real-world situations.
+
 ---
