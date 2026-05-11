@@ -1,5 +1,3 @@
-# Emergency Response Protocol Knowledge Base
-
 ## Component Owner: Hala E.
 Protocol Knowledge Base (Component 1)
 
