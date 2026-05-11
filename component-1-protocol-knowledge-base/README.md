@@ -1,5 +1,4 @@
 ## Component Owner: Hala E.
-Protocol Knowledge Base (Component 1)
 
 ---
 
