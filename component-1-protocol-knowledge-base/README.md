@@ -1,7 +1,5 @@
 ## Component Owner: Hala E.
 
----
-
 ## Overview
 
 This component builds the foundational **emergency response protocol knowledge base** for the overall system.
