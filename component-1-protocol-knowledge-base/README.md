@@ -1,11 +1,11 @@
-# 🚨 Emergency Response Protocol Knowledge Base
+# Emergency Response Protocol Knowledge Base
 
-## 👤 Component Owner: Hala E.
+## Component Owner: Hala E.
 Protocol Knowledge Base (Component 1)
 
 ---
 
-## 📌 Overview
+## Overview
 
 This component builds the foundational **emergency response protocol knowledge base** for the overall system.
 
@@ -15,7 +15,7 @@ The goal is to reduce ambiguity during emergency situations by converting unstru
 
 ---
 
-## 🧠 Purpose
+## Purpose
 
 During emergency situations, relying on unstructured or written procedures can lead to delays and human error.
 
@@ -54,7 +54,7 @@ Reference dataset:
 ](https://catalog.data.gov/dataset/incidents-responded-to-by-fire-companies)
 ---
 
-## 🧪 Sample Data
+## Our Sample Data
 
 The current knowledge base includes structured protocols for:
 
@@ -77,7 +77,7 @@ Each entry is manually structured and standardized to ensure consistency and AI 
 
 ---
 
-## 🔗 System Role
+## System Role
 
 This component acts as the **foundational data layer** of the system.
 
@@ -89,7 +89,7 @@ All other components depend on this knowledge base:
 
 ---
 
-## 📈 Current Status
+## Current Status
 
 - ✔ Schema designed and implemented
 - ✔ Sample protocols created (5 entries)
@@ -99,7 +99,7 @@ All other components depend on this knowledge base:
 
 ---
 
-## 🎯 Outcome
+## Outcome
 
 The result is a clean, structured emergency protocol knowledge base that enables:
 - Reliable AI-based incident classification
