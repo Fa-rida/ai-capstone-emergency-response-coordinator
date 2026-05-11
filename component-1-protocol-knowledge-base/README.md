@@ -38,7 +38,7 @@ Each emergency protocol is stored as a single record in Airtable with the follow
 
 ---
 
-## 📊 Data Sources
+## Data Sources
 
 Sample protocols were created using:
 - Internal emergency procedure guidelines (school/public safety style references)
@@ -61,7 +61,7 @@ Each entry is manually structured and standardized to ensure consistency and AI 
 
 ---
 
-## ⚙️ Implementation Details
+## Implementation Details
 
 - Built using **Airtable**
 - Data is manually curated and structured into predefined fields
@@ -100,7 +100,3 @@ The result is a clean, structured emergency protocol knowledge base that enables
 - Reliable AI-based incident classification
 - Automated emergency response workflows
 - Scalable integration with future system components
-
----
-
-## 📁 Project Structure (GitHub)
