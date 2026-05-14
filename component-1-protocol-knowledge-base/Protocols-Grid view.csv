@@ -1,0 +1,18 @@
+﻿Protocol ID,Emergency Type,Description,Trigger Keywords,Severity,Roles Involved,Steps,Priority,Ai Summary
+FIRE_001,Fire,Fire emergency requiring immediate evacuation,"smoke, fire, burning, alarm",High,"Security, Staff, Students","1. Activate fire alarm
+2. Evacuate building immediately
+3. Use nearest exit
+4. Do not use elevators
+5. Call fire department",1.0,High severity fire emergency requiring immediate activation of alarm systems and full building evacuation via nearest exits.
+MED_001,Medical,Medical emergency requiring first aid response,"unconscious, injury, bleeding, collapse",Medium,"Security, First Aid Team
+","1. Call medical assistance
+2. Secure area
+3. Provide first aid if trained
+4. Wait for paramedics",2.0,Medium severity medical emergency requiring basic first aid response and coordination with emergency medical services.
+LOCK_001,Lockdown,Security threat requiring building lockdown,"intruder, threat, lockdown",High,"Security, All staff","1. Lock all doors
+2. Turn off lights
+3. Stay silent
+4. Move away from windows
+5. Wait for all-clear signal",1.0,High severity security threat requiring immediate lockdown of all facilities and strict shelter-in-place procedures until all-clear is given.
+FIRE_002,Fire,"Structure fire incident requiring coordinated evacuation, fire suppression response, and emergency services activation.","fire, smoke, burning building, flames, alarm activation, structure fire",High,"Security, Fire Safety Team, Students, Emergency Services",1. Activate fire alarm system 2. Initiate immediate evacuation of building 3. Direct occupants to nearest safe exits 4. Ensure elevators are not used 5. Call emergency fire services 6. Account for all evacuees at assembly point,1.0,"High severity structure fire requiring rapid evacuation, fire department response, and assembly point accountability procedures."
+MED_002,Medical,Medical emergency requiring rapid first aid response and potential transport to medical facilities.,"unconscious, collapse, injury, bleeding, chest pain, medical emergency",Medium,"Security, First Aid Team, Staff, Emergency Medical Services",1. Assess situation and ensure scene safety 2. Call emergency medical services immediately 3. Provide first aid if trained personnel available 4. Keep area clear for responders 5. Monitor patient condition until help arrives 6. Document incident for reporting,2.0,"Medical emergency requiring immediate assessment, first aid intervention if available, and urgent coordination with emergency responders."
