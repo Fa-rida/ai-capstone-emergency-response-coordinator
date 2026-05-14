@@ -1,0 +1,382 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://cloud.flowiseai.com/api/v1/prediction/ef5f059e-8ff9-4299-bf90-9c536f2ed100",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "=json",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "question",
+              "value": "={{ $json.fields.incident_text }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        208,
+        0
+      ],
+      "id": "b375b717-eba5-4586-b589-4854d7bfe32a",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\n\nreturn items.map(item => {\n  const text = item.json.text;\n  const question = item.json.question;\n\n  const getValue = (label) => {\n    const regex = new RegExp(label + ':\\\\s*(.+)');\n    const match = text.match(regex);\n    return match ? match[1].trim() : '';\n  };\n\n  return {\n    json: {\n      incident_text: question,\n      incident_type: getValue('INCIDENT_TYPE'),\n      protocol_id: getValue('PROTOCOL_ID'),\n      severity: getValue('SEVERITY'),\n      matched_keywords: getValue('MATCHED_KEYWORDS'),\n      recommended_steps: getValue('RECOMMENDED_STEPS'),\n      confidence: getValue('CONFIDENCE'),\n      status: 'classified',\n      source: 'n8n'\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        416,
+        0
+      ],
+      "id": "be8d8903-c337-43cc-b010-9887e2f453e6",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "appd2AytVKF5K4V9s",
+          "mode": "list",
+          "cachedResultName": "Emergency Response Protocol ",
+          "cachedResultUrl": "https://airtable.com/appd2AytVKF5K4V9s"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblVGq0MtPMeCld16",
+          "mode": "list",
+          "cachedResultName": "Incidents",
+          "cachedResultUrl": "https://airtable.com/appd2AytVKF5K4V9s/tblVGq0MtPMeCld16"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "protocol_id",
+              "displayName": "protocol_id",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "record_id",
+              "displayName": "record_id",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": true
+            },
+            {
+              "id": "created_at",
+              "displayName": "created_at",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "dateTime",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "status",
+              "displayName": "status",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "unprocessed",
+                  "value": "unprocessed"
+                },
+                {
+                  "name": "classified",
+                  "value": "classified"
+                },
+                {
+                  "name": "error",
+                  "value": "error"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "incident_type",
+              "displayName": "incident_type",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Fire",
+                  "value": "Fire"
+                },
+                {
+                  "name": "Medical",
+                  "value": "Medical"
+                },
+                {
+                  "name": "Lockdown",
+                  "value": "Lockdown"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "incident_text",
+              "displayName": "incident_text",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "severity",
+              "displayName": "severity",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "High",
+                  "value": "High"
+                },
+                {
+                  "name": "Medium",
+                  "value": "Medium"
+                },
+                {
+                  "name": "Low",
+                  "value": "Low"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "matched_keywords",
+              "displayName": "matched_keywords",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "recommended_steps",
+              "displayName": "recommended_steps",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "confidence",
+              "displayName": "confidence",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "High",
+                  "value": "High"
+                },
+                {
+                  "name": "Medium",
+                  "value": "Medium"
+                },
+                {
+                  "name": "Low",
+                  "value": "Low"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "source",
+              "displayName": "source",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        624,
+        0
+      ],
+      "id": "01a478de-8e15-4aab-afa6-1c5b31cf5b83",
+      "name": "Create a record",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "41b68ZH3HmohRa7D",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -272,
+        16
+      ],
+      "id": "4ff92f80-b0bb-49b4-af9f-becf4e33fb11",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "base": {
+          "__rl": true,
+          "value": "appd2AytVKF5K4V9s",
+          "mode": "list",
+          "cachedResultName": "Emergency Response Protocol ",
+          "cachedResultUrl": "https://airtable.com/appd2AytVKF5K4V9s"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblhulBbPTyxmGwX0",
+          "mode": "list",
+          "cachedResultName": "Incident_Reports",
+          "cachedResultUrl": "https://airtable.com/appd2AytVKF5K4V9s/tblhulBbPTyxmGwX0"
+        },
+        "filterByFormula": "={status} = \"new\"",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        -64,
+        16
+      ],
+      "id": "f13a03d2-adda-426c-b933-3ec02ba2038f",
+      "name": "Search records",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "41b68ZH3HmohRa7D",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Create a record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create a record": {
+      "main": [
+        []
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Search records",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search records": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "af96ced8-b918-437b-85b4-2f4d8591c4eb",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "81783764b94498feb247200813756807d96aa7e1a1cdbb790e5a11ccc44718c3"
+  },
+  "id": "k9QiIzQff8u9hywW",
+  "tags": []
+}
