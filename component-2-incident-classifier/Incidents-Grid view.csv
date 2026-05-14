@@ -1,0 +1,21 @@
+﻿protocol_id,record_id,created_at,status,incident_type,incident_text,severity,matched_keywords,recommended_steps,confidence,source
+MED_001,55,,classified,Medical,Student having a seizure in the cafeteria,Medium,"injury, collapse",1. Call medical assistance 2. Secure area 3. Provide first aid if trained,Medium,n8n
+MED_002,56,,classified,Medical,Multiple students reporting chest pain after a gas smell,Medium,chest pain,1. Assess situation and ensure scene safety 2. Call emergency medical services immediately 3. Provide first aid if trained,Medium,n8n
+FIRE_002,57,,classified,Fire,Flames spotted coming from the electrical room on the third floor,High,flames,"1. Activate fire alarm system, 2. Initiate immediate evacuation, 3. Direct occupants to nearest safe exits",High,n8n
+MED_001,58,,classified,Medical,Teacher reported an injured student with heavy bleeding in the hallway,Medium,"injury, bleeding",1. Call medical assistance 2. Secure area 3. Provide first aid if trained,High,n8n
+FIRE_002,59,,classified,Fire,"Fire exit blocked by flames, students trapped on fourth floor",High,"fire, flames","1. Activate fire alarm system, 2. Initiate immediate evacuation, 3. Direct occupants to nearest safe exits",High,n8n
+MED_001,60,,classified,Medical,Student collapsed during gym class and is not breathing,Medium,"collapse, unconscious",1. Call medical assistance 2. Secure area 3. Provide first aid if trained,High,n8n
+LOCK_001,61,,classified,Lockdown,Intruder reported on school grounds refusing to leave,High,intruder,"1. Lock all doors, 2. Turn off lights, 3. Stay silent",High,n8n
+MED_001,62,,classified,Medical,Staff member collapsed at their desk unresponsive,Medium,"unconscious, collapse",1. Call medical assistance 2. Secure area 3. Provide first aid if trained,High,n8n
+MED_001,63,,classified,Medical,Student found unconscious in the bathroom,Medium,unconscious,1. Call medical assistance 2. Secure area 3. Provide first aid if trained,High,n8n
+LOCK_001,64,,classified,Lockdown,Unknown person spotted in the building with a suspicious bag,High,intruder,"1. Lock all doors, 2. Turn off lights, 3. Stay silent",Medium,n8n
+LOCK_001,65,,classified,Lockdown,Armed individual reported near the main entrance,High,"intruder, threat","1. Lock all doors, 2. Turn off lights, 3. Stay silent",High,n8n
+LOCK_001,66,,classified,Lockdown,Lockdown requested by local police due to nearby incident,High,"lockdown, intruder, threat",1. Lock all doors 2. Turn off lights 3. Stay silent,High,n8n
+FIRE_001,67,,classified,Fire,Small fire started in the chemistry lab during an experiment,High,fire,1. Activate fire alarm 2. Evacuate building immediately 3. Use nearest exit,High,n8n
+LOCK_001,68,,classified,Lockdown,Suspicious person threatening students near the parking lot,High,threat,1. Lock all doors 2. Turn off lights 3. Stay silent,High,n8n
+LOCK_001,69,,classified,Lockdown,Unknown person spotted in the building with a suspicious bag,High,intruder,1. Lock all doors 2. Turn off lights 3. Stay silent,High,n8n
+LOCK_001,70,,classified,Lockdown,Security received a threat call about a weapon on campus,High,threat,"1. Lock all doors, 2. Turn off lights, 3. Stay silent",High,n8n
+FIRE_002,71,,classified,Fire,Flames spotted coming from the electrical room on the third floor,High,flames,"1. Activate fire alarm system, 2. Initiate immediate evacuation, 3. Direct occupants to nearest safe exits",High,n8n
+FIRE_001,72,,classified,Fire,Burning smell reported throughout the entire east wing,High,burning,1. Activate fire alarm 2. Evacuate building immediately 3. Use nearest exit,High,n8n
+FIRE_002,73,,classified,Fire,"Fire alarm triggered in the science lab, smell of burning chemicals",High,"fire alarm, burning, smell of burning chemicals","1. Activate fire alarm system, 2. Initiate immediate evacuation, 3. Direct occupants to nearest safe exits",High,n8n
+FIRE_001,74,,classified,Fire,"Hazardous chemical spill reported in the biology lab, students evacuating",High,"none directly, but considering the hazardous nature and evacuation",1. Activate fire alarm 2. Evacuate building immediately 3. Use nearest exit,Medium,n8n
