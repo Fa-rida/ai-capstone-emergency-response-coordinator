@@ -1,25 +1,27 @@
 # Task Assignment & Tracking
 **Owner:** Farida
 ## Description
-Creates a workflow that activates the selected protocol, assigns each task to the appropriate responder, tracks the status of completion and sends out reminders when tasks are delayed.
-# Emergency Response Coordinator System
+This component of the Emergency Response Coordinator project focuses on creating a workflow that activates the selected protocol, assigns each task to the appropriate responder, and tracks the status of completion.
 
-## Overview
-The Emergency Response Coordinator System is an AI-powered workflow automation platform designed to classify emergency incidents and automatically generate response tasks using predefined emergency protocols. The system integrates Airtable, n8n, and Flowise AI to streamline emergency coordination and task tracking.
+The workflow uses n8n and Airtable to:
+- retrieve classified incidents
+- identify the corresponding emergency protocol
+- retrieve protocol steps
+- automatically generate emergency response tasks
+- assign roles and priorities
+- track task progress through a Kanban dashboard
 
 ---
 
 # Features
 
-- AI-powered incident classification
-- Automated protocol matching
-- Dynamic emergency task generation
+- Automatic task generation from emergency protocols
+- Dynamic protocol step retrieval
 - Role-based task assignment
-- Priority-based response handling
-- Due-time generation for emergency tasks
-- Step-by-step protocol execution tracking
-- Airtable task management dashboard
-- Kanban-style task monitoring
+- Priority-based emergency response handling
+- Automatic due-time generation
+- Step-by-step emergency task tracking
+- Airtable Kanban dashboard integration
 - Multi-protocol emergency support
 
 Supported protocols:
@@ -33,17 +35,19 @@ Supported protocols:
 
 # Workflow Pipeline
 
-Incident Report  
+Classified Incident  
 ↓  
-AI Incident Classification  
-↓  
-Protocol Identification  
+Protocol Matching  
 ↓  
 Protocol Step Retrieval  
 ↓  
 Automatic Task Generation  
 ↓  
-Task Assignment & Tracking Dashboard
+Role Assignment  
+↓  
+Priority & Due-Time Assignment  
+↓  
+Task Tracking Dashboard
 
 ---
 
@@ -58,24 +62,8 @@ Task Assignment & Tracking Dashboard
 
 # Database Structure
 
-## Protocols Table
-Stores emergency response protocols and classifications.
-
-Fields:
-- Protocol ID
-- Emergency Type
-- Description
-- Trigger Keywords
-- Severity
-- Roles Involved
-- Steps
-- Priority
-- AI Summary
-
----
-
 ## Protocol Steps Table
-Stores structured protocol steps for automated task generation.
+Stores structured emergency protocol steps used for task generation.
 
 Fields:
 - Step_Id
@@ -85,22 +73,6 @@ Fields:
 - Assigned_Role
 - Due_Minutes
 - Priority
-
----
-
-## Incidents Table
-Stores classified emergency incidents.
-
-Fields:
-- record_id
-- protocol_id
-- status
-- incident_type
-- incident_text
-- severity
-- confidence
-- recommended_steps
-- source
 
 ---
 
@@ -122,13 +94,13 @@ Fields:
 
 # Automation Features
 
-- Automatically detects newly classified incidents
-- Matches incidents to corresponding emergency protocols
-- Retrieves protocol steps dynamically
-- Generates individual emergency tasks automatically
+- Detects newly classified incidents
+- Matches incidents to emergency protocols
+- Retrieves corresponding protocol steps dynamically
+- Generates individual emergency response tasks
 - Assigns responsible roles
-- Calculates task due times
-- Tracks task progress using Kanban boards
+- Calculates due times automatically
+- Tracks task progress visually using a Kanban board
 
 ---
 
@@ -141,37 +113,27 @@ Fields:
 
 ---
 
-# My Contribution
-
-Designed and implemented the automated task assignment and tracking workflow, including:
-- Airtable database architecture
-- Protocol step structure
-- Dynamic task generation system
-- Priority handling
-- Due-time automation
-- Kanban task tracking dashboard
-- n8n workflow integration
-
----
-
 # Screenshots
 
-Add screenshots of:
-- Airtable dashboard
-- Kanban task board
-- n8n workflows
-- Generated emergency tasks
+## n8n Workflow
+![n8n Workflow](screenshots/n8n-workflow.png)
+
+## Task Tracking Dashboard
+![Kanban Board](screenshots/kanban-board.png)
+
+## Generated Emergency Tasks
+![Tasks Table](screenshots/tasks-table.png)
 
 ---
 
 # Future Improvements
 
-- Real-time notifications
-- SMS/email emergency alerts
 - Automatic overdue task escalation
-- User authentication
-- Advanced analytics dashboard
-- Multi-user coordination system
+- Real-time notifications
+- Email/SMS emergency alerts
+- Multi-user responder tracking
+- Analytics dashboard
+
 ## Status
 - [ ] Design complete
 - [ ] Sample data prepared
