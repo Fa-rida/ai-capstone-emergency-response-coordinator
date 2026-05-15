@@ -1,0 +1,365 @@
+{
+  "name": "Task Assignment & Tracking",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "1906a20d-82aa-4ff4-838c-cf657cad2c6f",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "base": {
+          "__rl": true,
+          "value": "appd2AytVKF5K4V9s",
+          "mode": "list",
+          "cachedResultName": "Emergency Response Protocol ",
+          "cachedResultUrl": "https://airtable.com/appd2AytVKF5K4V9s"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblVGq0MtPMeCld16",
+          "mode": "list",
+          "cachedResultName": "Incidents",
+          "cachedResultUrl": "https://airtable.com/appd2AytVKF5K4V9s/tblVGq0MtPMeCld16"
+        },
+        "filterByFormula": "status = \"classified\"",
+        "returnAll": false,
+        "limit": 1,
+        "options": {},
+        "sort": {
+          "property": [
+            {
+              "field": "record_id",
+              "direction": "desc"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        208,
+        0
+      ],
+      "id": "e90e49ef-7c24-4756-b1aa-0efb0c4ec496",
+      "name": "Find Classified Incidents",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "0ZsOstf91JYw2ZNI",
+          "name": "Airtable Personal Access Token account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "base": {
+          "__rl": true,
+          "value": "appd2AytVKF5K4V9s",
+          "mode": "list",
+          "cachedResultName": "Emergency Response Protocol ",
+          "cachedResultUrl": "https://airtable.com/appd2AytVKF5K4V9s"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblankbbBuCKHOo4F",
+          "mode": "list",
+          "cachedResultName": "Protocols",
+          "cachedResultUrl": "https://airtable.com/appd2AytVKF5K4V9s/tblankbbBuCKHOo4F"
+        },
+        "filterByFormula": "={Protocol ID} = \"{{ $json.fields.protocol_id }}\"",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        416,
+        0
+      ],
+      "id": "12816ce5-6ba7-40f2-b55e-cd80c2428bb9",
+      "name": "Find Matching Protocol",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "0ZsOstf91JYw2ZNI",
+          "name": "Airtable Personal Access Token account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "appd2AytVKF5K4V9s",
+          "mode": "list",
+          "cachedResultName": "Emergency Response Protocol ",
+          "cachedResultUrl": "https://airtable.com/appd2AytVKF5K4V9s"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblRc0TungU0or1tC",
+          "mode": "list",
+          "cachedResultName": "Tasks",
+          "cachedResultUrl": "https://airtable.com/appd2AytVKF5K4V9s/tblRc0TungU0or1tC"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Incident_Id": "={{ $('Find Classified Incidents').item.json.fields.record_id }}",
+            "Protocol_Id": "={{ $json.fields.Protocol_Id }}",
+            "Task name": "={{ $json.fields.Task_Name }}",
+            "Assigned role": "={{ $json.fields.Assigned_Role }}",
+            "Status": "=Pending",
+            "priority": "={{ $json.fields.Priority }}",
+            "Step_Order": "={{ $json.fields.Step_Order }}",
+            "due_time": "={{ $now.plus({ minutes: $json.fields.Due_Minutes }) }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Task_Id",
+              "displayName": "Task_Id",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": true
+            },
+            {
+              "id": "Incident_Id",
+              "displayName": "Incident_Id",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Protocol_Id",
+              "displayName": "Protocol_Id",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Task name",
+              "displayName": "Task name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Assigned role",
+              "displayName": "Assigned role",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Pending",
+                  "value": "Pending"
+                },
+                {
+                  "name": "In Progress",
+                  "value": "In Progress"
+                },
+                {
+                  "name": "Completed",
+                  "value": "Completed"
+                },
+                {
+                  "name": "Overdue",
+                  "value": "Overdue"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "due_time",
+              "displayName": "due_time",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "dateTime",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "priority",
+              "displayName": "priority",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Step_Order",
+              "displayName": "Step_Order",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        832,
+        0
+      ],
+      "id": "8455bf55-56e2-4f14-841a-b5cf35feb72a",
+      "name": "Create Emergency Tasks",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "0ZsOstf91JYw2ZNI",
+          "name": "Airtable Personal Access Token account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "base": {
+          "__rl": true,
+          "value": "appd2AytVKF5K4V9s",
+          "mode": "list",
+          "cachedResultName": "Emergency Response Protocol ",
+          "cachedResultUrl": "https://airtable.com/appd2AytVKF5K4V9s"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblzTvzvEfnW8oxNv",
+          "mode": "list",
+          "cachedResultName": "Protocol Steps",
+          "cachedResultUrl": "https://airtable.com/appd2AytVKF5K4V9s/tblzTvzvEfnW8oxNv"
+        },
+        "filterByFormula": "={Protocol_Id} = \"{{ $('Find Matching Protocol').item.json.fields['Protocol ID'] }}\"",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        624,
+        0
+      ],
+      "id": "aa087d3d-7c91-42f6-ac00-863508a0bbeb",
+      "name": "Find Protocol Steps",
+      "executeOnce": true,
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "0ZsOstf91JYw2ZNI",
+          "name": "Airtable Personal Access Token account 3"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Find Classified Incidents",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Find Classified Incidents": {
+      "main": [
+        [
+          {
+            "node": "Find Matching Protocol",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Find Matching Protocol": {
+      "main": [
+        [
+          {
+            "node": "Find Protocol Steps",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Emergency Tasks": {
+      "main": [
+        []
+      ]
+    },
+    "Find Protocol Steps": {
+      "main": [
+        [
+          {
+            "node": "Create Emergency Tasks",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "cde968f0-b2c6-487b-9543-638d6d26d970",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a69ec37954977b88a479ebfa185a30fc778ae1a13872bdbe9e26e7b8edafd875"
+  },
+  "id": "3YTrQCmuQe4GM1Rc",
+  "tags": []
+}
