@@ -116,13 +116,13 @@ Fields:
 # Screenshots
 
 ## n8n Workflow
-![n8n Workflow](screenshots/n8n-workflow.png)
+![n8n Workflow](screenshots/n8n-workflow.PNG)
 
 ## Task Tracking Dashboard
-![Kanban Board](screenshots/kanban-board.png)
+![Kanban Board](screenshots/kanban-board.PNG)
 
 ## Generated Emergency Tasks
-![Tasks Table](screenshots/tasks-table.png)
+![Tasks Table](screenshots/tasks-table.PNG)
 
 ---
 
@@ -135,9 +135,9 @@ Fields:
 - Analytics dashboard
 
 ## Status
-- [ ] Design complete
-- [ ] Sample data prepared
-- [ ] Initial implementation
-- [ ] Testing
-- [ ] Integration with other components
-- [ ] Documentation complete
+- [x] Design complete
+- [x] Sample data prepared
+- [x] Initial implementation
+- [x] Testing
+- [x] Integration with other components
+- [x] Documentation complete
