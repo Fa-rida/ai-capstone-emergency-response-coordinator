@@ -1,0 +1,27 @@
+﻿Step_Id,Protocol_Id,Step_Order,Task_Name,Assigned_Role,Due_Minutes,Priority
+1,FIRE_001,1,Activate fire alarm,Security ,1,1
+2,FIRE_001,2,Evacuate building immediately,Staff,3,1
+3,FIRE_001,3,Use nearest exit,Students,4,2
+4,FIRE_001,4,Do not use elevators,Fire Safety Team,2,2
+5,FIRE_001,5,Call fire department,Emergency Services,2,1
+6,FIRE_002,1,Activate fire alarm system,Security,1,1
+7,FIRE_002,2,Initiate immediate evacuation of building,Fire Safety Team,3,1
+8,FIRE_002,3,Direct occupants to nearest safe exits,Staff,4,2
+9,FIRE_002,4,Ensure elevators are not used,Fire Safety Team,3,2
+10,FIRE_002,5,Call emergency fire services,Emergency Services,2,1
+11,FIRE_002,6,Account for all evacuees at assembly point,Staff,5,2
+12,LOCK_001,1,Lock all doors,Security,1,1
+13,LOCK_001,2,Turn off lights,Staff,2,1
+14,LOCK_001,3,Stay silent,Staff,3,2
+15,LOCK_001,4,Move away from windows,Staff,4,2
+16,LOCK_001,5,Wait for all-clear signal,Security,30,3
+17,MED_001,1,Call medical assistance,Security,1,1
+18,MED_001,2,Secure area,Security,2,1
+19,MED_001,3,Provide first aid if trained,First Aid Team,4,2
+20,MED_001,4,Wait for paramedics,First Aid Team,15,3
+21,MED_002,1,Assess situation and ensure scene safety,Security,1,1
+22,MED_002,2,Call emergency medical services immediately,Emergency Medical Services,1,1
+23,MED_002,3,Provide first aid if trained personnel available,First Aid Team,4,2
+24,MED_002,4,Keep area clear for responders,Staff,4,2
+25,MED_002,5,Monitor patient condition until help arrives,First Aid Team,10,2
+26,MED_002,6,Document incident for reporting,Staff,20,3
