@@ -132,7 +132,6 @@ Fields:
 - Real-time notifications
 - Email/SMS emergency alerts
 - Multi-user responder tracking
-- Analytics dashboard
 
 ## Status
 - [x] Design complete
