@@ -1,0 +1,11 @@
+﻿Task_Id,Incident_Id,Protocol_Id,Task name,Assigned role,Status,due_time,priority,Step_Order
+66,116.0,LOCK_001,Lock all doors,Security,Completed,5/15/2026 2:43pm,1,1
+69,116.0,LOCK_001,Turn off lights,Staff,In Progress,5/15/2026 2:43pm,1,2
+71,116.0,LOCK_001,Lock all doors,Security,Pending,5/15/2026 3:12pm,1,1
+74,116.0,LOCK_001,Turn off lights,Staff,Pending,5/15/2026 3:13pm,1,2
+67,116.0,LOCK_001,Stay silent,Staff,Pending,5/15/2026 2:43pm,2,3
+68,116.0,LOCK_001,Move away from windows,Staff,Pending,5/15/2026 2:43pm,2,4
+72,116.0,LOCK_001,Stay silent,Staff,Pending,5/15/2026 3:14pm,2,3
+73,116.0,LOCK_001,Move away from windows,Staff,Overdue,5/15/2026 3:15pm,2,4
+65,116.0,LOCK_001,Wait for all-clear signal,Security,Pending,5/15/2026 2:43pm,3,5
+70,116.0,LOCK_001,Wait for all-clear signal,Security,Pending,5/15/2026 3:41pm,3,5
