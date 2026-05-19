@@ -49,8 +49,13 @@ One surprising aspect of RAG was how effectively the chatbot retrieved informati
 
 ### How could you improve this chatbot for real-world use?
 
-This chatbot could be improved by adding more cybersecurity documents, using a persistent vector database instead of in-memory storage, improving the user interface, and adding stronger filtering for malicious or irrelevant prompts. It could also support PDF uploads and larger knowledge bases.
+This chatbot could be improved by adding more cybersecurity documents, using a persistent vector database instead of in-memory storage so that document embeddings remain stored permanently, improving the user interface, and adding stronger filtering for malicious or irrelevant prompts. It could also support PDF uploads and larger knowledge bases.
 
 ### How might you use RAG in your capstone project?
 
-RAG could be used in a cybersecurity capstone project to build an intelligent assistant that retrieves security policies, incident response procedures, attack techniques, or threat intelligence reports. This would help users quickly access accurate cybersecurity information from trusted internal documents.
+RAG could significantly improve my AI-powered Emergency Response Coordinator System by allowing emergency responders to quickly retrieve relevant emergency procedures, response protocols, evacuation guidelines, and medical instructions from stored knowledge bases in real time.
+
+In my capstone project, incidents are submitted through an automated workflow where Flowise AI classifies the emergency type and severity level before tasks are dynamically generated and tracked through Airtable and n8n. Integrating RAG into this system would allow responders to ask natural language questions such as “What are the evacuation procedures for a fire emergency?” or “What steps should be completed during a lockdown situation?” and receive accurate responses directly from trusted emergency response documentation.
+
+This would improve response speed, decision-making, and coordination during emergencies while reducing the need to manually search through procedures or protocol documents.
+
