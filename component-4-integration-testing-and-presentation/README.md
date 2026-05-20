@@ -14,9 +14,10 @@ The Emergency Response Coordinator is a four-component system that turns a free-
 
 ## System Architecture
 
-![Architecture Diagram]
+### Architecture Diagram
 
----<img width="1431" height="759" alt="emergency-response-architectur" src="https://github.com/user-attachments/assets/ba17991e-d41d-40c6-820b-e9af9034f8e2" />
+
+<img width="1431" height="759" alt="emergency-response-architectur" src="https://github.com/user-attachments/assets/ba17991e-d41d-40c6-820b-e9af9034f8e2" />
 
 
 ## How the Four Components Connect
@@ -211,29 +212,6 @@ Follow these steps in order to get the full system running.
 
 ---
 
-## Repository Structure
-
-```
-emergency-response-coordinator/
-├── README.md                          ← This file
-├── architecture/
-│   ├── emergency-response-architecture.drawio
-│   └── emergency-response-architecture.png
-├── test-data/
-│   ├── protocols.csv
-│   ├── protocol_steps.csv
-│   ├── responders.csv
-│   └── sample-incidents.csv
-├── n8n/
-│   ├── incident-classifier-workflow.json
-│   └── task-assignment-workflow.json
-├── flowise/
-│   └── classification-prompt.txt
-└── docs/
-    └── setup-guide.md
-```
-
----
 
 ## Tools Used
 
