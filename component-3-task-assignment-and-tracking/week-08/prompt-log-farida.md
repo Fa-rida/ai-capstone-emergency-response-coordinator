@@ -16,7 +16,7 @@ I was preparing for Checkpoint 2 of our capstone project. My team is building an
 
 ## Prompt
 
-> I need you to act as a capstone project advisor for a university AI integration course. I'm going to describe my group project, and I need you to interview me about its current state, then produce a structured gap analysis.
+The capstone audit (part 2.3)
 
 ## Result
 Copilot interviewed me with questions about the Airtable schema, workflow handoffs, field mismatches, test records, and current project status. It then generated a Checkpoint 2 readiness assessment with sections for working components, critical gaps, schema issues, recommended fixes, and testing concerns.
@@ -66,7 +66,7 @@ After generating tasks successfully, the Airtable Kanban board became cluttered 
 
 ## Prompt
 
-> How can I organize my Airtable task views so only active emergency tasks appear in the Kanban board?
+> How can I organize my Airtable task views so only active emergency tasks appear?
 
 ## Result
 The AI suggested creating filtered Airtable views using `Incident_Id` and `Status` filters, sorting tasks by `Step_Order`, and customizing Kanban cards to display task names, assigned roles, priorities, and statuses.
