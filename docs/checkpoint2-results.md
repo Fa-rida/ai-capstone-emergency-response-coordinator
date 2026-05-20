@@ -38,7 +38,7 @@ Existing successful workflow runs were used to document the pipeline stages and 
 A new incident report was successfully added to the `Incident_Reports` table with `status = new`.
 
 - **Screenshot:**  
-`incident-reports-stage.png`
+![reports Stage](screenshots/reports-stage.png.PNG)
 
 ---
 
