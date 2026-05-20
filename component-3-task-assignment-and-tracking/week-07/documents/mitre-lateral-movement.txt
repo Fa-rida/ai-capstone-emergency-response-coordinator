@@ -1,0 +1,51 @@
+==================================================
+LATERAL MOVEMENT
+==================================================
+
+Technique: Remote Services
+
+Description:
+Adversaries may use valid accounts to log into services that accept remote connections such as SSH, Telnet, VNC, or RDP. Once authenticated, attackers can perform actions as the compromised user.
+
+Enterprise environments often use centralized identity management systems that allow users to authenticate across multiple systems. If attackers obtain valid domain credentials, they may gain access to numerous machines and cloud services.
+
+Legitimate administrative tools such as Apple Remote Desktop may also be abused to gain remote code execution and perform lateral movement within a network.
+
+Procedure Examples:
+- Aquatic Panda used remote scheduled tasks during lateral movement.
+- Brute Ratel C4 used RPC for lateral movement.
+- Ember Bear used harvested credentials and the Impacket framework to move laterally.
+- Kivars remotely triggered keyboard input and mouse clicks.
+- MacMa managed remote screen sessions on victim systems.
+
+--------------------------------------------------
+
+Technique: Pass the Hash
+
+Description:
+Adversaries may use stolen password hashes to authenticate without knowing the victim’s plaintext password. This technique bypasses standard authentication methods and allows attackers to move laterally through an environment.
+
+Captured password hashes are often obtained through credential access techniques. Once authenticated, attackers may access local or remote systems and perform additional attacks such as Pass the Ticket attacks.
+
+Procedure Examples:
+- During the 2025 Poland Wiper Attacks, attackers reused password hash values to gain access to additional systems.
+- APT1 used pass-the-hash techniques.
+- APT28 used pass the hash for lateral movement.
+- APT32 used pass the hash during lateral movement operations.
+- APT41 used Mimikatz to enable lateral movement using captured password hashes.
+
+--------------------------------------------------
+
+Technique: Internal Spearphishing
+
+Description:
+After gaining access to accounts or systems inside an organization, adversaries may use internal spearphishing to compromise additional users or obtain more information.
+
+Attackers leverage trusted internal accounts to increase the likelihood that employees will trust phishing messages. Internal spearphishing may include malicious attachments, phishing links, impersonation attempts, or messages sent through internal communication platforms such as Microsoft Teams.
+
+Procedure Examples:
+- APT-C-36 used compromised internal accounts to send phishing emails to IT personnel.
+- Gamaredon Group used Outlook VBA modules to spread malicious emails internally.
+- HEXANE conducted internal spearphishing attacks against executives, HR, and IT personnel.
+- Kimsuky used internal spearphishing after stealing victim information.
+- Leviathan conducted internal spearphishing for lateral movement within victim environments.
