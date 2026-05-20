@@ -18,6 +18,7 @@ Incident_Reports → AI Incident Classifier → Incidents → Task Assignment Wo
 **Expected Final State:**  
 
 The incident should be classified as a fire emergency, assigned the appropriate fire protocol, and automatically generate emergency response tasks with assigned roles, priorities, due times, and statuses visible in the dashboard.
+
 ---
 
 # End-to-End Status: PARTIAL
