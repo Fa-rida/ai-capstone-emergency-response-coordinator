@@ -22,7 +22,7 @@ The capstone audit (part 2.3)
 Copilot interviewed me with questions about the Airtable schema, workflow handoffs, field mismatches, test records, and current project status. It then generated a Checkpoint 2 readiness assessment with sections for working components, critical gaps, schema issues, recommended fixes, and testing concerns.
 
 ## Evaluation
-The audit was useful because it helped identify real integration issues, especially field-name inconsistencies between Airtable tables and n8n workflows. It also helped organize which parts of the system were fully tested versus partially working. However, some recommendations became overly complex, such as suggesting a full Airtable schema migration, which was unnecessary for the current scope of the project.
+The audit was useful because it helped identify real integration issues, especially field-name inconsistencies between Airtable tables and n8n workflows. It also helped organize which parts of the system were fully tested versus partially working. However, some recommendations became overly complex, such as suggesting a full Airtable schema migration, which was unnecessary for the current scope of the project. And since the workflow was already tested and working, changing field names before submission could break the integration.
 
 ## What I Changed
 After the audit, I reviewed the Airtable and n8n field mappings more carefully and confirmed that some field names were inconsistent across tables. I adjusted workflow mappings where necessary, cleaned duplicate task records created during testing, added `Step_Order` values for better task organization, and improved the Airtable task views and filters for tracking tasks more clearly.
