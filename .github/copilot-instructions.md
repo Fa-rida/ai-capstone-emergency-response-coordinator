@@ -58,10 +58,56 @@
 | status | Single Select | Component 2 (n8n) | classified / error |
 | source | Single Line | Component 2 (n8n) | n8n |
 
+### Protocol Steps
+
+| Field | Type | Written By | Status Values |
+|-------|------|-----------|---------------|
+| Step_Id | Number | Manual Entry | |
+| Protocol_Id | Single Line Text | Manual Entry | |
+| Step_Order | Number | Manual Entry | |
+| Task_Name | Single Line Text | Manual Entry | |
+| Assigned_Role | Single Line Text | Manual Entry | |
+| Due_Minutes | Number | Manual Entry | |
+| Priority | Number | Manual Entry | |
+
+### Tasks
+
+| Field | Type | Written By | Status Values |
+|-------|------|-----------|---------------|
+| Task_Id | Number | n8n Workflow | |
+| Incident_Id | Number | n8n Workflow | |
+| Protocol_Id | Single Line Text | n8n Workflow | |
+| Task name | Single Line Text | n8n Workflow | |
+| Assigned role | Single Select | n8n Workflow | Security, Staff, Students, Fire Safety Team, Emergency Services, First Aid Team, Emergency Medical Services |
+| Status | Single Select | n8n Workflow / User | Pending, In Progress, Completed, Overdue |
+| due_time | Date & Time | n8n Workflow | |
+| priority | Number | n8n Workflow | |
+| Step_Order | Number | n8n Workflow | |
+
+### Protocols
+
+| Field | Type | Written By | Status Values |
+|-------|------|-----------|---------------|
+| Protocol ID | Single Line Text | Manual Entry / AI Workflow | |
+| Emergency Type | Single Select | AI Workflow | Fire, Medical, Lockdown |
+| Description | Long Text | Manual Entry | |
+| Trigger Keywords | Long Text | Manual Entry | |
+| Severity | Single Select | AI Workflow | High, Medium |
+| Roles Involved | Long Text | Manual Entry | |
+| Steps | Long Text | Manual Entry | |
+| Priority | Number | Manual Entry | |
+| Ai Summary | Long Text | AI Workflow | |
+
 ## Conventions
 - Field names: snake_case
 - Status values: lowercase
-- Boolean fields use is_ prefix
+- Date fields represent generated timestamps
+- Priority scale:
+  - 1 = High Priority
+  - 2 = Medium Priority
+  - 3 = Lower Priority
+- Step_Order controls emergency task execution sequence
+- Tasks are automatically generated from protocol steps using n8n workflows
 
 ## Current State
 - **What's working:** Flowise chatflow built and tested; all 3 emergency 
