@@ -14,11 +14,10 @@ The Emergency Response Coordinator is a four-component system that turns a free-
 
 ## System Architecture
 
-![Architecture Diagram](./architecture/emergency-response-architecture.png)
+![Architecture Diagram]
 
-> See [`emergency-response-architecture.drawio`](./architecture/emergency-response-architecture.drawio) for the editable source file (open at [draw.io](https://draw.io)).
+---<img width="1431" height="759" alt="emergency-response-architectur" src="https://github.com/user-attachments/assets/ba17991e-d41d-40c6-820b-e9af9034f8e2" />
 
----
 
 ## How the Four Components Connect
 
