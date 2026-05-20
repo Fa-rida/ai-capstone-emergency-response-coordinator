@@ -38,7 +38,7 @@ Existing successful workflow runs were used to document the pipeline stages and 
 A new incident report was successfully added to the `Incident_Reports` table with `status = new`.
 
 - **Screenshot:**  
-![reports Stage](screenshots/reports-stage.png.PNG)
+![Reports Stage](component-3-task-assignment-and-tracking/screenshots/reports-stage.png.PNG)
 
 ---
 
@@ -55,7 +55,7 @@ The AI classification workflow previously classified incidents successfully by a
 During final testing, the workflow was temporarily blocked by `PUBLIC_API_BILLING_LIMIT_EXCEEDED` errors related to Airtable/API limits.
 
 - **Screenshot:**  
-`ai-core-stage.png`
+![AI Core Stage](component-3-task-assignment-and-tracking/screenshots/ai-core-stage.png.PNG)
 
 ---
 
@@ -71,7 +71,7 @@ The Task Assignment & Tracking workflow successfully generated emergency respons
   - statuses
 
 - **Screenshot:**  
-`tasks-stage.png`
+![Tasks Stage](component-3-task-assignment-and-tracking/screenshots/tasks-stage.png.PNG)
 
 ---
 
@@ -88,7 +88,7 @@ Generated tasks appeared correctly in Airtable views and Kanban dashboards. Task
 Task progression is currently updated manually through Airtable Kanban views.
 
 - **Screenshot:**  
-`dashboard-stage.png`
+![Dashboard Stage](component-3-task-assignment-and-tracking/screenshots/dashboard-stage.png.PNG)
 
 ---
 
