@@ -1,0 +1,62 @@
+==================================================
+INITIAL ACCESS
+==================================================
+
+Technique: Phishing
+
+Description:
+Adversaries may send phishing messages to gain access to victim systems. All forms of phishing are electronically delivered social engineering. Phishing can be targeted, known as spearphishing. In spearphishing, a specific individual, company, or industry is targeted by the adversary. Adversaries can also conduct non-targeted phishing campaigns such as mass malware spam campaigns.
+
+Adversaries may send victims emails containing malicious attachments or links to execute malicious code on victim systems. Phishing may also be conducted through third-party services such as social media platforms. Attackers often pose as trusted sources and may manipulate email metadata or headers to evade detection. Email spoofing can also be used to fool both recipients and automated security systems. Another tactic is thread hijacking, where attackers insert malicious links or attachments into existing email conversations.
+
+Victims may also receive phishing messages instructing them to call a phone number where they are directed to visit malicious websites, download malware, or install remote management tools.
+
+Procedure Examples:
+- AppleJeus used spearphishing emails to distribute malicious payloads.
+- Axiom used spearphishing to initially compromise victims.
+- GOLD SOUTHFIELD conducted malicious spam campaigns to gain access to victim machines.
+- Hikit spread through spearphishing attacks.
+- INC Ransom used phishing to gain initial access.
+
+--------------------------------------------------
+
+Technique: Valid Accounts
+
+Description:
+Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Compromised credentials may be used to bypass access controls on systems within a network and may provide persistent access to remote systems and external services such as VPNs, Outlook Web Access, and remote desktop services.
+
+Compromised credentials may also grant increased privileges or access to restricted areas of a network. Adversaries sometimes avoid malware entirely and instead rely on legitimate credentials to make detection more difficult.
+
+Attackers may also abuse inactive accounts belonging to former employees because suspicious activity on those accounts is less likely to be detected. The overlap of permissions between local, domain, and cloud accounts can allow attackers to pivot across systems and escalate privileges throughout an enterprise network.
+
+Procedure Examples:
+- Sandworm Team used valid accounts during the 2015 Ukraine Electric Power Attack to escalate privileges and move laterally.
+- AppleJeus gained access to the 3CX corporate environment through legitimate VPN credentials.
+- Akira used valid VPN credentials to remotely access victim networks.
+- During the Anthropic AI-orchestrated Campaign, attackers used harvested credentials to access APIs, databases, and logging infrastructure.
+- APT18 leveraged legitimate credentials to log into external remote services.
+- APT28 used stolen credentials obtained through spearphishing emails and default passwords on IoT devices to gain network access.
+
+--------------------------------------------------
+
+Technique: Drive-by Compromise
+
+Description:
+Adversaries may gain access to a system through a user visiting a compromised website during normal browsing activity. Multiple methods can be used to deliver exploit code to a browser, including compromised websites, malicious advertisements, modified script files, or cross-site scripting attacks.
+
+Browser push notifications may also be abused to execute malicious JavaScript code after a user grants notification permissions. Often, adversaries target websites commonly visited by a specific industry, region, or community. These attacks are commonly known as watering hole attacks.
+
+Typical drive-by compromise process:
+1. A user visits a compromised website hosting malicious content.
+2. Scripts execute automatically and search for vulnerable browser or plugin versions.
+3. Exploit code is delivered to the browser.
+4. If successful, the attacker gains code execution on the victim’s system.
+
+Unlike attacks against public-facing applications, drive-by compromises focus on exploiting software running on client endpoints.
+
+Procedure Examples:
+- During the 3CX Supply Chain Attack, AppleJeus compromised the tradingtechnologies website using a hidden iframe.
+- Andariel used watering hole attacks with zero-day exploits.
+- APT19 performed a watering hole attack on Forbes to compromise targets.
+- APT28 used strategic web compromise and reflected XSS attacks to redirect users to phishing pages.
+- APT32 infected victims through compromised watering hole websites.
