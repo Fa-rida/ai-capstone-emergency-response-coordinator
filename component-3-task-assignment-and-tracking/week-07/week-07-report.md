@@ -11,6 +11,9 @@
   - mitre-lateral-movement.txt (~2 pages)
 
 ---
+## Chat Link ##
+https://cloud.flowiseai.com/chatbot/91331532-eb90-4661-a194-32e5837e77b0
+---
 
 ## 2. Test Results
 
