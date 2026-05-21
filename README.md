@@ -71,7 +71,7 @@ README.md
 
 Stores emergency response protocols, protocol metadata, and ordered response steps.
 
-## Component 2 — Incident Classifier
+### Component 2 — Incident Classifier
 
 Uses AI workflows to classify incoming emergency reports and assign matching protocol IDs.
 
@@ -88,15 +88,15 @@ Performs end-to-end workflow testing, validates integrations, and prepares final
 
 ## Dashboard Views
 
-## Pipeline Status View
+### Pipeline Status View
 
 Displays the current workflow status of emergency response tasks for monitoring and coordination purposes.
 
-## Error Monitor View
+### Error Monitor View
 
 Tracks failed workflow actions and identifies tasks requiring troubleshooting or manual review.
 
-## Kanban Task Board
+### Kanban Task Board
 
 Provides a visual workflow management interface grouped by task status.
 
