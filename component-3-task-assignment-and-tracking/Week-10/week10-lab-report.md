@@ -5,13 +5,17 @@ An error-handling branch was added to the Task Assignment workflow using IF node
 
 ![Error Handling IF Node](component-3-task-assignment-and-tracking/Week-10/error-handling-if-node-screenshot.PNG)
 
+![Error Handling Airtable Record](component-3-task-assignment-and-tracking/Week-10/error-handling-airtable-record.PNG)
+
 
 ---
 
 ## Part 2 — Routing Logic
 An IF routing node was added to the workflow to demonstrate how tasks can be routed differently based on priority level. Priority level 1 was used as the threshold for identifying high-priority emergency tasks. 
 
-[screenshot]
+![Priority Routing IF Node](component-3-task-assignment-and-tracking/Week-10/priority-level-if-node.PNG)
+
+![Priority Routing Screenshot](component-3-task-assignment-and-tracking/Week-10/priority-level-screenshot.PNG)
 
 
 ---
@@ -21,13 +25,13 @@ An IF routing node was added to the workflow to demonstrate how tasks can be rou
 ### Pipeline Status View
 The pipeline status view provides emergency coordinators with a detailed overview of tasks and their current workflow states for monitoring and coordination purposes. 
 
-[screenshot]
+![Pipeline Status View](component-3-task-assignment-and-tracking/Week-10/pipeline-status-view.PNG)
 
 
 ### Error Monitor View
 The error monitor view is used by administrators to track failed workflow actions and identify tasks that require troubleshooting or manual intervention. 
 
-[screenshot]
+![Error Monitoring View](component-3-task-assignment-and-tracking/Week-10/error-monitoring-view.PNG)
 
 
 ---
