@@ -129,3 +129,8 @@ Provides a visual workflow management interface grouped by task status.
 * Hala
 * Farida
 * MD
+
+
+---
+
+![Pipeline Status](./component-3-task-assignment-and-tracking/Week-10/pipeline-status-view.PNG)
