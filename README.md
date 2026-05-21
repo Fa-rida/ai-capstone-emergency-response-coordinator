@@ -10,6 +10,8 @@ This project was developed as part of an AI Capstone course to improve emergency
 
 The system processes incoming emergency incident reports, classifies the emergency type using AI, matches the correct emergency response protocol, generates response tasks automatically, and tracks workflow progress through Airtable dashboards.
 
+![Pipeline Status](./component-3-task-assignment-and-tracking/Week-10/pipeline-status-view.PNG)
+
 ---
 
 ## Features
@@ -129,8 +131,3 @@ Provides a visual workflow management interface grouped by task status.
 * Hala
 * Farida
 * MD
-
-
----
-
-![Pipeline Status](./component-3-task-assignment-and-tracking/Week-10/pipeline-status-view.PNG)
